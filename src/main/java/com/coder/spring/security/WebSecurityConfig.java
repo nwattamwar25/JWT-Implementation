@@ -101,6 +101,9 @@ public class WebSecurityConfig {
                     .requestMatchers("/api/auth/**").permitAll()
                     // Allow public access to auth endpoints
                     .requestMatchers("/api/test/**").permitAll()
+                    // Allow public access to Validate endpoints
+                    .requestMatchers("api/validate/**").permitAll()
+
                     // Allow public access to test endpoints
                     .anyRequest().authenticated());
     // Require authentication for any other request
